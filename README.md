@@ -6,7 +6,10 @@ My zsh config: oh-my-zsh + spaceship prompt + fzf/zoxide/eza/bat/fd + fast synta
 
 Personal dotfiles + a single `install.sh` that bootstraps a fresh Linux machine to my exact shell setup: prompt, plugins, CLI tools, history config, git aliases, and a cheatsheet shown on every new terminal.
 
+<!-- screenshot.png: drop a terminal screenshot here and uncomment
 ![terminal preview](screenshot.png)
+-->
+
 
 ## License
 
@@ -63,6 +66,7 @@ After install, log out/in or run `exec zsh`.
 - `config/.gitignore_global` — global ignore (`.idea/`, `.claude/`)
 - `config/.czrc` — commitizen conventional-changelog config
 - `config/phpstorm-keymap.xml` — custom PhpStorm keymap (import manually via Settings > Keymap > Import Keymap). PhpStorm itself uses **Settings Sync** (JetBrains account), not this repo.
+- `config/fastfetch/config.jsonc` — fastfetch module list (excludes Local IP and Battery, shown on every new terminal)
 
 ## References
 

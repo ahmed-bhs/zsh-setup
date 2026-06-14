@@ -54,6 +54,10 @@ if [ ! -d "$HOME/.nvm" ]; then
   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 fi
 
+echo "==> Installing fastfetch config"
+mkdir -p "$HOME/.config/fastfetch"
+cp "$(dirname "$0")/config/fastfetch/config.jsonc" "$HOME/.config/fastfetch/config.jsonc"
+
 echo "==> Linking .zshrc"
 [ -f "$HOME/.zshrc" ] && cp "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y%m%d-%H%M%S)"
 cp "$(dirname "$0")/.zshrc" "$HOME/.zshrc"
