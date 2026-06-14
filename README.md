@@ -24,7 +24,8 @@ cd zsh-setup
    - `fast-syntax-highlighting`
 7. Install `nvm` if missing
 8. Backup any existing `~/.zshrc` (timestamped) and install this repo's `.zshrc`
-9. Set zsh as default login shell (`chsh`)
+9. Backup and install `~/.gitconfig`, `~/.gitignore_global`, `~/.czrc` from `config/`
+10. Set zsh as default login shell (`chsh`)
 
 After install, log out/in or run `exec zsh`.
 
@@ -45,6 +46,40 @@ After install, log out/in or run `exec zsh`.
 - **nvm** — lazy-loaded, only initializes on first `node`/`npm`/`npx`/`nvm` call
 - **History** — 50k entries, deduped, shared across sessions
 - **Cheatsheet** — `cheat` or `?` prints all shortcuts; shown automatically on every new terminal
+
+## Other configs included
+
+- `config/.gitconfig` — git aliases (`co`, `ci`, `st`, `br`, `wip`), user identity, meld merge tool, gh credential helper
+- `config/.gitignore_global` — global ignore (`.idea/`, `.claude/`)
+- `config/.czrc` — commitizen conventional-changelog config
+- `config/phpstorm-keymap.xml` — custom PhpStorm keymap (import manually via Settings > Keymap > Import Keymap). PhpStorm itself uses **Settings Sync** (JetBrains account), not this repo.
+
+## References
+
+### oh-my-zsh & theme
+- oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh
+- spaceship prompt: https://github.com/denysdovhan/spaceship-prompt
+
+### zsh plugins
+- zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
+- zsh-completions: https://github.com/zsh-users/zsh-completions
+- zsh-history-substring-search: https://github.com/zsh-users/zsh-history-substring-search
+- fast-syntax-highlighting: https://github.com/zdharma-continuum/fast-syntax-highlighting
+
+### oh-my-zsh built-in plugins used
+git, docker, docker-compose, kubectl, composer, symfony, heroku, pip, lein, command-not-found, colored-man-pages, extract, sudo, fzf — all from https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+
+### CLI tools
+- fzf: https://github.com/junegunn/fzf
+- zoxide: https://github.com/ajeetdsouza/zoxide
+- eza: https://github.com/eza-community/eza
+- bat: https://github.com/sharkdp/bat
+- fd: https://github.com/sharkdp/fd
+- btop: https://github.com/aristocratos/btop
+- duf: https://github.com/muesli/duf
+- tldr (tldr-hs): https://github.com/tldr-pages/tldr
+- fastfetch: https://github.com/fastfetch-cli/fastfetch
+- nvm: https://github.com/nvm-sh/nvm
 
 ## Optional: icons
 

@@ -1,0 +1,4 @@
+.idea/
+
+# Claude Code artifacts and temporary files
+.claude/

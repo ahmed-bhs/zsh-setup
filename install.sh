@@ -58,6 +58,16 @@ echo "==> Linking .zshrc"
 [ -f "$HOME/.zshrc" ] && cp "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y%m%d-%H%M%S)"
 cp "$(dirname "$0")/.zshrc" "$HOME/.zshrc"
 
+echo "==> Linking git config"
+DIR="$(dirname "$0")/config"
+for f in .gitconfig .gitignore_global .czrc; do
+  [ -f "$HOME/$f" ] && cp "$HOME/$f" "$HOME/$f.bak.$(date +%Y%m%d-%H%M%S)"
+  cp "$DIR/$f" "$HOME/$f"
+done
+
+echo "==> PhpStorm keymap saved at config/phpstorm-keymap.xml"
+echo "Import manually: PhpStorm > Settings > Keymap > Import Keymap"
+
 echo "==> Setting zsh as default shell"
 if [ "$SHELL" != "$(command -v zsh)" ]; then
   chsh -s "$(command -v zsh)" "$USER"

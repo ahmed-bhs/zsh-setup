@@ -1,0 +1,32 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+
+[user]
+	email = ahmedbhs123@gmail.com
+	name = Ahmed EBEN HASSINE
+
+[pager]
+	branch = false
+
+[merge]
+	tool = meld
+
+[core]
+	filemode = true
+	excludesfile = ~/.gitignore_global
+	editor = vim
+
+[branch]
+	sort = committerdate
+
+[credential]
+	helper = store
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+
+[init]
+	defaultBranch = main

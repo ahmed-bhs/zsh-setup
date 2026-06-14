@@ -1,0 +1,54 @@
+<keymap version="1" name="Default copy" parent="Default for XWin">
+  <action id="ChangesView.AddUnversioned" />
+  <action id="CommentByBlockComment">
+    <keyboard-shortcut first-keystroke="ctrl colon" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="shift ctrl colon" />
+  </action>
+  <action id="Console.TableResult.EditFilterCriteria" />
+  <action id="DBNavigator.Actions.DataEditor.FindData" />
+  <action id="DBNavigator.Actions.ExecutionResult.FindData" />
+  <action id="DBNavigator.Actions.MethodExecutionCursorResult.Find" />
+  <action id="DBNavigator.Actions.SessionBrowser.Find" />
+  <action id="Diagram.DeselectAll" />
+  <action id="EditorJoinLines" />
+  <action id="EditorLineEndWithSelection">
+    <keyboard-shortcut first-keystroke="shift end" />
+    <keyboard-shortcut first-keystroke="x" />
+  </action>
+  <action id="GotoAction" />
+  <action id="GotoSymbol">
+    <keyboard-shortcut first-keystroke="shift ctrl alt n" />
+    <keyboard-shortcut first-keystroke="shift ctrl alt f" />
+  </action>
+  <action id="InsertInlineCompletionAction">
+    <keyboard-shortcut first-keystroke="enter" />
+  </action>
+  <action id="InsertLiveTemplate" />
+  <action id="OpenInlineChatAction">
+    <keyboard-shortcut first-keystroke="shift ctrl g" />
+  </action>
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="ctrl alt l" />
+    <keyboard-shortcut first-keystroke="ctrl alt a" />
+  </action>
+  <action id="StructuralSearchPlugin.StructuralSearchAction">
+    <keyboard-shortcut first-keystroke="ctrl alt numpad1" />
+  </action>
+  <action id="TodoViewGroupByFlattenPackage" />
+  <action id="Tool_External Tools_PHPBF">
+    <keyboard-shortcut first-keystroke="ctrl numpad0" />
+  </action>
+  <action id="Tool_External Tools_PHPCS FIXER">
+    <keyboard-shortcut first-keystroke="shift ctrl a" />
+  </action>
+  <action id="copilot.cycleNextInlays">
+    <keyboard-shortcut first-keystroke="alt close_bracket" />
+    <keyboard-shortcut first-keystroke="ctrl period" />
+    <keyboard-shortcut first-keystroke="alt right_parenthesis" />
+  </action>
+  <action id="copilot.openCopilot">
+    <keyboard-shortcut first-keystroke="ctrl alt #10000e9" />
+  </action>
+</keymap>
