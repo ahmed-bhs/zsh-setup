@@ -5,10 +5,7 @@ My zsh config: oh-my-zsh + spaceship prompt + fzf/zoxide/eza/bat/fd + fast synta
 ## About
 
 Personal dotfiles + a single `install.sh` that bootstraps a fresh Linux machine to my exact shell setup: prompt, plugins, CLI tools, history config, git aliases, and a cheatsheet shown on every new terminal.
-
-<!-- screenshot.png: drop a terminal screenshot here and uncomment
-![terminal preview](screenshot.png)
--->
+ <img width="1843" height="962" alt="Screenshot from 2026-06-14 11-03-15" src="https://github.com/user-attachments/assets/a3f06762-91d8-4c48-bc38-53ecdf0d9eb1" />
 
 
 ## License
