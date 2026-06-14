@@ -2,6 +2,16 @@
 
 My zsh config: oh-my-zsh + spaceship prompt + fzf/zoxide/eza/bat/fd + fast syntax highlighting + history substring search.
 
+## About
+
+Personal dotfiles + a single `install.sh` that bootstraps a fresh Linux machine to my exact shell setup: prompt, plugins, CLI tools, history config, git aliases, and a cheatsheet shown on every new terminal.
+
+![terminal preview](screenshot.png)
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
 ## New machine setup
 
 ```bash
