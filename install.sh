@@ -1,8 +1,24 @@
 #!/usr/bin/env bash
 set -e
 
-echo "==> Installing apt packages"
+echo "==> Installing zsh and git"
 sudo apt-get update -qq
+sudo apt-get install -y zsh git curl
+
+echo "==> Checking oh-my-zsh"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
+echo "==> Checking spaceship prompt theme"
+ZSH_THEMES="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
+mkdir -p "$ZSH_THEMES"
+if [ ! -d "$ZSH_THEMES/spaceship-prompt" ]; then
+  git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_THEMES/spaceship-prompt"
+fi
+ln -sf "$ZSH_THEMES/spaceship-prompt/spaceship.zsh-theme" "$ZSH_THEMES/spaceship.zsh-theme"
+
+echo "==> Installing apt packages"
 for pkg in fzf zoxide bat eza fd-find btop duf tldr; do
   sudo apt-get install -y "$pkg" || echo "skip: $pkg not available"
 done
@@ -33,9 +49,19 @@ for name in "${!plugins[@]}"; do
   fi
 done
 
+echo "==> Checking nvm"
+if [ ! -d "$HOME/.nvm" ]; then
+  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+fi
+
 echo "==> Linking .zshrc"
 [ -f "$HOME/.zshrc" ] && cp "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y%m%d-%H%M%S)"
 cp "$(dirname "$0")/.zshrc" "$HOME/.zshrc"
 
-echo "==> Done. Run: exec zsh"
+echo "==> Setting zsh as default shell"
+if [ "$SHELL" != "$(command -v zsh)" ]; then
+  chsh -s "$(command -v zsh)" "$USER"
+fi
+
+echo "==> Done. Log out/in (or run: exec zsh) to start using it."
 echo "Note: for eza icons, install a Nerd Font and set it as your terminal font (not done automatically)."
